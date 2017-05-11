@@ -40,6 +40,25 @@
         <li><b>Motivation: </b>Lucy is a no nonsense young lady who likes to help those around her.  She wants easy access to the weather conditions for many locations so that she can always be prepared to offer some unsolicited advice to her peers.</li>
         <li><b>Environment: </b>Lucy has a smart phone that she uses to keep her eye on her social media ‘friends’.  She is usually not very far from her trusty laptop however. Most of her time online is spent either on the University network or the apartment broadband.</li>
       </ul>
+      <h2>Content</h2>
+      <p>All weather pages should include Location name, temperature, high, low, current weather descriptor, precipitation, and wind on small, and hourly temps should be added on larger screens. (See provided weather data file for more details)</p>
+      <h3>Pages</h3>
+      <ol>
+        <li><b>Home: </b>weather for the current location. Current location should be determined by using the Geolocation API of the browser.  This information should be passed to the WeatherUnderground API (<a href="https://www.wunderground.com/weather/api/">https://www.wunderground.com/weather/api/</a>) to retrieve the current conditions. </li>
+        <li><b>Franklin, Greenville, Springfield: </b>weather for each specific location. The weather for The Franklin and Greenville pages should be pulled from a local JSON file that will be provided.</li>
+        <li><b>Search: </b>Begins with only a search box, characters entered will cause a list of suggested matches to appear.  Selected location will pull up the weather. The search term from the field should be sent to the <a href="https://www.wunderground.com/weather/api/d/docs?d=autocomplete-api&MR=1">WeatherUnderground autocomplete API</a> (https://www.wunderground.com/weather/api/d/docs?d=autocomplete-api&MR=1), and the results used to pull the current conditions for the selected location.</li>
+      </ol>
+      <h2>Styles</h2>
+      <h3>Branding</h3>
+      <p>The client provided the following initial concept for a name and logo: (You recognize that this logo could easily be re-created entirely with CSS using the right font and HTML entities… &#9856;  &#9861;)</p>
+      <img src="images/logo-blue.jpg" alt="Logo Blue Feeling Lucky?">
+      <h3>Typography</h3>
+      <p>The client expressed interest in the following fonts:</p>
+      <p><b>Heading Font: </b><a href="https://fonts.google.com/specimen/Sansita">Sansita</a> From Google Fonts</p>
+      <img src="images/sanita-alphabet.jpg" alt="Sansita characters layout at google fonts">
+      <img src="images/sansita-headline.jpg" alt="Heading example using Sansita font">
+      <p><b>Body Copy font: </b>Helvetica</p>
+      <p>A B C Ć Č D Đ E F G H I J K L M N O P Q R S Š T U V W X Y Z Ž a b c č ć d đ e f g h i j k l m n o p q r s š t u v w x y z ž 1 2 3 4 5 6 7 8 9 0 ‘ ? ’ “ ! ” ( % ) [ # ] { @ } / & < - + ÷ × = > ® © $ € £ ¥ ¢ : ; , . *</p>
 
     </main>
     <footer>
