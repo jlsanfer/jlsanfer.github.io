@@ -22,7 +22,8 @@ figure {
 body {
   margin: 0; /* remove any margin from body */
   padding: 0; /* ditto for padding */
-  background-color: salmon;
+  background-color: rgba(250, 128, 114, 0.1);
+  font-family: helvetica, "second choice", sans-serif;
 }
 
 main {
@@ -37,6 +38,7 @@ nav ul {
 }
 
 nav {
+  background-color: ;
   position: fixed;
   bottom: 0;
   left: 0;
@@ -55,4 +57,66 @@ h4,
 h5,
 h6 {
   font-family: Sansita, "second choice", generic-family;
+}
+
+body {
+font-size: 1em;
+}
+
+h1 {
+  font-size: 1.2em;
+}
+
+h2 {
+  font-size: 1.1em;
+}
+
+header {
+  background-color: rgba(231, 239, 97, 0.9);
+}
+nav {
+  background-color: rgba(240, 124, 108, 0.9);
+  font-size: 1.1em;
+  text-decoration: bold;
+  justify-content: space-around;
+  flex-flow: wrap;
+}
+
+nav a:link {
+  color: #4A4653;
+}
+
+nav a:visited {
+  color: #4A4653;
+}
+
+nav a:hover {
+  color: #E7EF61;
+}
+
+nav a:active {
+  color: #A6D8DB;
+  background-color: #47556F;
+  font-size: 1.105em;
+}
+
+main {
+  background-image: url("images/sunny-winter.jpg");
+  background-size: cover;
+}
+
+footer {
+  background-color: #E7EF61;
+}
+
+#currentConditions {
+  background-color: rgba(200,200,200,.6);
+  margin: .2em auto;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+#rotateDice {
+  transform: rotate(25deg);
+  display: inline-block;
 }
