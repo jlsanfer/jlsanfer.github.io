@@ -19,63 +19,35 @@ figure {
   the HTML5 semantic elements */
 }
 
+/*Attributes for the body*/
 body {
   margin: 0; /* remove any margin from body */
   padding: 0; /* ditto for padding */
   background-color: rgba(250, 128, 114, 0.1);
   font-family: helvetica, "second choice", sans-serif;
+  font-size: 1em;
 }
 
+/*Attributes for the main section*/
 main {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
 }
 
+/*Attributes for the nav bar listed items*/
 nav ul {
   list-style-type: none;
   display: flex;
 }
 
+/*Attributes for the nav bar general*/
 nav {
-  background-color: ;
+  background-color: rgba(240, 124, 108, 0.9);
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
-}
-
-.title h1 + h1 {
-  text-align: right;
-  margin-top: -.7em;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: Sansita, "second choice", generic-family;
-}
-
-body {
-font-size: 1em;
-}
-
-h1 {
-  font-size: 1.2em;
-}
-
-h2 {
-  font-size: 1.1em;
-}
-
-header {
-  background-color: rgba(231, 239, 97, 0.9);
-}
-nav {
-  background-color: rgba(240, 124, 108, 0.9);
   font-size: 1.1em;
   text-decoration: bold;
   justify-content: space-around;
@@ -100,11 +72,44 @@ nav a:active {
   font-size: 1.105em;
 }
 
+/*Attributes second header at the title of the website*/
+.title h1 + h1 {
+  text-align: right;
+  margin-top: -.7em;
+}
+
+/*Font attribute for Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: Sansita, "second choice", generic-family;
+}
+
+/*Heading H1 attributes*/
+h1 {
+  font-size: 1.2em;
+}
+
+/*Heading H2 attributes*/
+h2 {
+  font-size: 1.1em;
+}
+
+/*Header properties*/
+header {
+  background-color: rgba(231, 239, 97, 0.9);
+}
+
+/*Main properties*/
 main {
   background-image: url("images/sunny-winter.jpg");
   background-size: cover;
 }
 
+/*Footer properties*/
 footer {
   background-color: #E7EF61;
 }
@@ -116,7 +121,10 @@ footer {
   border-radius: 5px;
 }
 
+/**/
 #rotateDice {
   transform: rotate(25deg);
   display: inline-block;
 }
+
+
