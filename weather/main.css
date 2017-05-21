@@ -35,11 +35,6 @@ main {
   align-items: center;
 }
 
-/*Attributes for the nav bar listed items*/
-nav ul {
-  list-style-type: none;
-  display: flex;
-}
 
 /*Attributes for the nav bar general*/
 nav {
@@ -52,6 +47,21 @@ nav {
   text-decoration: bold;
   justify-content: space-around;
   flex-flow: wrap;
+}
+
+/*Attributes for the nav bar listed items*/
+nav > ul{
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: wrap;
+  /*padding-left: 12em;*/
+  /*margin-top: -4.2em;*/
+  line-height: .75em;
+}
+
+nav li{
+  flex: 1 1 5em;
 }
 
 nav a:link {
@@ -126,5 +136,4 @@ footer {
   transform: rotate(25deg);
   display: inline-block;
 }
-
 
