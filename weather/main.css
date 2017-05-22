@@ -44,7 +44,6 @@ nav {
   left: 0;
   right: 0;
   font-size: 1.1em;
-  text-decoration: bold;
   justify-content: space-around;
   flex-flow: wrap;
 }
