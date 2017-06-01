@@ -44,19 +44,19 @@ nav {
   left: 0;
   right: 0;
   font-size: 1.1em;
-  justify-content: space-around;
-  flex-flow: wrap;
+  /*justify-content: space-around;
+  flex-flow: wrap column;
+  flex-direction: row;*/
 }
 
 /*Attributes for the nav bar listed items*/
 nav > ul{
   list-style-type: none;
   display: flex;
-  justify-content: space-around;
   flex-flow: wrap;
-  /*padding-left: 12em;*/
-  /*margin-top: -4.2em;*/
-  line-height: .75em;
+  justify-content: space-around;
+  line-height: 1em;
+  align-content: space-between;
 }
 
 nav li{
@@ -65,6 +65,7 @@ nav li{
 
 nav a:link {
   color: #4A4653;
+  text-decoration:  none;
 }
 
 nav a:visited {
@@ -136,3 +137,15 @@ footer {
   display: inline-block;
 }
 
+/*Desktop version*/
+@media only screen and (min-width: 600px) {
+  #body {
+    flex-direction: row;
+  }
+  #content {
+    width: 80%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 10px;
+  }
+}
