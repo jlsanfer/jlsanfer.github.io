@@ -5,6 +5,19 @@
   to total width instead of content width */
 }
 
+#headerImage img {
+  src="../weather/images/logo-blue.jpg";
+}
+#headerImage {
+  display: none;
+}
+
+.title {
+  display: inherit;
+  position: relative;
+  left: 20px;
+}
+
 article,
 aside,
 footer,
@@ -82,12 +95,12 @@ nav a:active {
   font-size: 1.105em;
 }
 
-/*Attributes second header at the title of the website*/
+/*Attributes second header at the title of the website
 .title h1 + h1 {
   text-align: right;
   margin-top: -.7em;
 }
-
+*/
 /*Font attribute for Headings */
 h1,
 h2,
@@ -163,11 +176,28 @@ footer {
 
   #currentConditions,
   #hourlyForecast {
-    background: white;
+    background: rgba(71, 85, 111, 0.8);
   }
 
   #currentConditions {
     order: -1;
   }
 
+  #headerImage img {
+    src="../weather/images/logo-blue.jpg";
+  }
+  #headerImage {
+    display: inherit;
+    position: relative;
+    top: 20px;
+    left: 20px;
+  }
+
+  .title {
+    display: none;
+  }
+  .subTitle {
+    position: relative;
+    right: auto;
+  }
 }
