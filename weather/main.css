@@ -149,7 +149,7 @@ footer {
 
   main {
     flex-flow: row wrap;
-    justify-content: space-around;
+    justify-content: space-between;
   }
 
   #currentConditions,
@@ -157,5 +157,16 @@ footer {
   #hourlyForecast {
     margin: .5em;
     width: 30%;
+    margin-left: .5em;
   }
+
+  #currentConditions,
+  #hourlyForecast {
+    background: white;
+  }
+
+  #currentConditions {
+    order: -1;
+  }
+
 }
