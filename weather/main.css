@@ -5,18 +5,35 @@
   to total width instead of content width */
 }
 
-#headerImage img {
-  src="../weather/images/logo-blue.jpg";
+/*.content {
+  width: 100%;
+  margin: auto;
+  /*padding: 10px;
+}*/
+
+#textRed {
+ color: red;
 }
-#headerImage {
+
+.headerImage img {
+  src="../weather/images/logo-blue.png";
+}
+.headerImage {
   display: none;
 }
 
 .title {
   display: inherit;
   position: relative;
-  left: 20px;
+  left: 1em;
+  top: .5em;
 }
+
+.subTitle {
+  position: relative;
+  left: 8em;
+}
+
 
 article,
 aside,
@@ -45,9 +62,15 @@ body {
 main {
   display: flex;
   flex-flow: column nowrap;
-  align-items: center;
+  /*align-items: center;*/
 }
 
+
+#currentConditions,
+#currentTemperature,
+#hourlyForecast {
+  width: 100%;
+}
 
 /*Attributes for the nav bar general*/
 nav {
@@ -56,10 +79,8 @@ nav {
   bottom: 0;
   left: 0;
   right: 0;
-  font-size: 1.1em;
-  /*justify-content: space-around;
-  flex-flow: wrap column;
-  flex-direction: row;*/
+  font-size: .9em;
+  /*width: 74%;*/
 }
 
 /*Attributes for the nav bar listed items*/
@@ -69,12 +90,13 @@ nav > ul{
   flex-flow: wrap;
   justify-content: space-around;
   line-height: 1em;
-  align-content: space-between;
+  /*align-content: space-between;*/
+  /*padding: inherit;*/
 }
 
-nav li{
-  flex: 1 1 5em;
-}
+/*nav ul{
+  flex: 1 1 1em;
+}*/
 
 nav a:link {
   color: #4A4653;
@@ -92,7 +114,6 @@ nav a:hover {
 nav a:active {
   color: #A6D8DB;
   background-color: #47556F;
-  font-size: 1.105em;
 }
 
 /*Attributes second header at the title of the website
@@ -108,12 +129,12 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: Sansita, "second choice", generic-family;
+  font-family: Sansita, Helvetica, sans-serif;
 }
 
 /*Heading H1 attributes*/
 h1 {
-  font-size: 1.2em;
+  font-size: 1.3em;
 }
 
 /*Heading H2 attributes*/
@@ -123,7 +144,7 @@ h2 {
 
 /*Header properties*/
 header {
-  background-color: rgba(231, 239, 97, 0.9);
+  background-color: rgba(231, 239, 97, 0.15);
 }
 
 /*Main properties*/
@@ -144,60 +165,93 @@ footer {
   border-radius: 5px;
 }
 
-/**/
+/*Rotates a the id dice 25 degrees*/
 #rotateDice {
   transform: rotate(25deg);
   display: inline-block;
 }
 
+#hourlyForecast > ul{
+  list-style-type: none;
+  display: flex row;
+}
+
 /*Desktop version*/
 @media only screen and (min-width: 600px) {
 
-  #content {
+  .content {
     width: 80%;
     max-width: 960px;
-    margin: 0 auto;
-    padding: 10px;
+    margin: auto;
+    /*padding: 10px;*/
   }
 
   main {
     flex-flow: row wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: stretch;
   }
+
 
   #currentConditions,
   #currentTemperature,
   #hourlyForecast {
-    margin: .5em;
-    width: 30%;
-    margin-left: .5em;
+    width: 1 1 auto;
+    width: 33%;
+    margin-left: .1em;
   }
 
   #currentConditions,
   #hourlyForecast {
-    background: rgba(71, 85, 111, 0.8);
+    background: rgba(166, 216, 219, 0.2);
   }
 
   #currentConditions {
     order: -1;
   }
 
-  #headerImage img {
-    src="../weather/images/logo-blue.jpg";
+  .headerImage img {
+    src="../weather/images/logo-blue.png";
   }
-  #headerImage {
+  .headerImage {
     display: inherit;
     position: relative;
-    top: 20px;
-    left: 20px;
+    top: 1em;
+    left: 1em;
+  }
+
+  .subTitle {
+    position: relative;
+    flex-flow: wrap-reverse;
   }
 
   .title {
     display: none;
   }
-  .subTitle {
+
+  nav {
     position: relative;
-    right: auto;
+    padding: .25em;
+    flex-flow: row nowrap;
   }
+
+
+
+  main {
+    background-image: url("");
+    background-size: cover;
+  }
+
+  #currentTemperature {
+    background-image: url("images/sunny-winter.jpg");
+    background-size: cover;
+  }
+
+  #currentConditions {
+    margin: 0em;
+    border: 0px;
+    border-radius: 0px;
+  }
+
+
 }
