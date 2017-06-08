@@ -70,7 +70,9 @@ main {
 #currentTemperature,
 #hourlyForecast {
   width: 100%;
+  text-align: center;
 }
+
 
 /*Attributes for the nav bar general*/
 nav {
@@ -243,6 +245,7 @@ footer {
   }
 
   #currentTemperature {
+    color: aliceblue;
     background-image: url("images/sunny-winter.jpg");
     background-size: cover;
   }
