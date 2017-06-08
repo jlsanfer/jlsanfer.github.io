@@ -62,9 +62,7 @@ body {
 main {
   display: flex;
   flex-flow: column nowrap;
-  /*align-items: center;*/
 }
-
 
 #currentConditions,
 #currentTemperature,
@@ -173,10 +171,31 @@ footer {
   display: inline-block;
 }
 
-#hourlyForecast > ul{
-  list-style-type: none;
-  display: flex row;
+#hourlyForecast {
+  display: none;
 }
+
+#wind1, #wind2 {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.leftCurrentConditions {
+  width: 55%;
+  flex-flow: row wrap;
+  flex: 1 0 1;
+  margin: .5em;
+  text-align: right;
+}
+
+.rightCurrentConditions {
+  width: 40%;
+  flex-flow: row wrap;
+  flex: 0 0 0;
+  margin: .5em;
+  text-align: left;
+}
+
 
 /*Desktop version*/
 @media only screen and (min-width: 600px) {
@@ -237,8 +256,6 @@ footer {
     flex-flow: row nowrap;
   }
 
-
-
   main {
     background-image: url("");
     background-size: cover;
@@ -256,5 +273,13 @@ footer {
     border-radius: 0px;
   }
 
+  #hourlyForecast {
+    display: block;
+  }
+
+  #hourlyForecast > ul {
+    display: flex row;
+    list-style-type: none;
+  }
 
 }
