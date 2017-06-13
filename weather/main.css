@@ -6,11 +6,10 @@
 }
 
 /*.content {
+  width: 100%;
+  margin: auto;
+ }*/
 
-  /*margin: auto;*/
-  /*padding: 10px;*/
- }
-*/
 #textRed {
  color: red;
 }
@@ -76,25 +75,24 @@ main {
 nav {
   background-color: rgba(240, 124, 108, 0.9);
   position: fixed;
-  flex-flow: row nowrap;
-  justify-content: space-around;
   bottom: 0;
-  left: 0;
-  right: 0;
+  display: flex;
   font-size: .9em;
   /*width: 100%;*/
-  padding: 50;
+  /*padding: 1;*/
+  /*display: flex;*/
 }
 
 /*Attributes for the nav bar listed items*/
 nav > ul{
   list-style-type: none;
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: wrap;
   justify-content: space-around;
   line-height: 1em;
-  padding: 50;
+  padding: 1;
 }
+
 
 nav > ul{
   flex: 1 1 auto;
