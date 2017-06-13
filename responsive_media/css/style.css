@@ -222,7 +222,7 @@ h1 {
   .page-header {
     background-image: url('/responsive_media/images/grand-canyon_banner_1200.jpg');
     background-size: cover;
-    src: url('/responsive_media/images/nps-logo_150.png');
+    src="/responsive_media/images/nps-logo_150.png";
 
   }
   .page-nav li {
