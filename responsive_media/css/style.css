@@ -221,7 +221,9 @@ h1 {
   /*	Background Images - Use with large screens */
   .page-header {
     background-image: url('/responsive_media/images/grand-canyon_banner_1200.jpg');
-    background-image: url('/responsive_media/images/nps-logo_150.png');
+    background-size: cover;
+    src: url('/responsive_media/images/nps-logo_150.png');
+
   }
   .page-nav li {
     flex: 0 1 10%;
