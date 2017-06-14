@@ -49,7 +49,13 @@ h1 {
 
 /*	Background Images - use with Small screens */
 
-.page-header {}
+.page-header {
+  background-image: url('/responsive_media/images/nps-logo_50.png'), url('/responsive_media/images/grand-canyon_banner_400.jpg');
+  background-position: right, left;
+  background-size: auto, cover;
+  background-repeat: no-repeat, no-repeat;
+}
+
 
 
 /*******************************
@@ -171,8 +177,10 @@ h1 {
   }
   /*	Background Images - Use with medium screens */
   .page-header {
-    background-image: url('/responsive_media/images/grand-canyon_banner_800.jpg');
-    background-size: auto;
+    background-image: url('/responsive_media/images/nps-logo_100.png'), url('/responsive_media/images/grand-canyon_banner_800.jpg');
+    background-position: right, left;
+    background-size: auto, cover;
+    background-repeat: no-repeat, no-repeat;
   }
   .page-nav {
     position: relative;
@@ -184,7 +192,6 @@ h1 {
     line-height: 1.375;
   }
   .featured-image {
-    background-image: url('/responsive_media/images/ruins_300.jpg');
     margin: 0 1em 1em 0;
     float: left;
     width: 50%;
@@ -220,9 +227,10 @@ h1 {
   }
   /*	Background Images - Use with large screens */
   .page-header {
-    background-image: url('/responsive_media/images/grand-canyon_banner_1200.jpg');
-    background-size: cover;
-    src="/responsive_media/images/nps-logo_150.png";
+    background-image: url('/responsive_media/images/nps-logo_150.png'), url('/responsive_media/images/grand-canyon_banner_1200.jpg');
+    background-position: right, left;
+    background-size: auto, cover;
+    background-repeat: no-repeat, no-repeat;
 
   }
   .page-nav li {
@@ -232,11 +240,5 @@ h1 {
     max-width: 80%;
     padding-right: 2em;
     padding-left: 2em;
-  }
-  .featured-image {
-    src="/responsive_media/images/ruins_600.jpg";
-    margin: 0 1em 1em 0;
-    float: left;
-    width: 50%;
   }
 }
