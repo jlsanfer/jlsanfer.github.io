@@ -1,24 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Basic Filters</title>
-	<link rel="stylesheet" href="css/filters.css">
-	<script src="js/jquery-3.0.0.min.js"></script>
-	<script>
-	$(function(){
-		// All jQuery code goes here
-
-	})
-	</script>
+  <meta charset="UTF-8">
+  <title>Basic Filters</title>
+  <link rel="stylesheet" href="css/filters.css">
+  <script src="js/jquery-3.0.0.min.js"></script>
+  <script>
+  $(function(){
+    /*
+    //Selects the first list item and changes the background
+    $('li:first').css('background-color', 'rgb(248,95,95)');
+    //Selects the last list item and changes the background
+    $('li:last').css('background-color', 'rgb(248,95,95)');
+    //Selects the even list items and changes the background
+    $('li:even').css('background-color', 'rgb(248,95,95)');
+    //Selects the odd list items and changes the background
+    $('li:odd').css('background-color', 'rgb(248,95,95)');
+    */
+    //Selects the third list item and changes the background
+    $('li:eq(3)').css('background-color', 'rgb(248,95,95)');
+  })
+  </script>
 </head>
 <body>
 <ul>
-		<li>Apples</li>
-		<li>Oranges</li>
-		<li>Peaches</li>
-		<li>Strawberries</li>
-		<li>Kiwi</li>
+    <li>Apples</li>
+    <li>Oranges</li>
+    <li>Peaches</li>
+    <li>Strawberries</li>
+    <li>Kiwi</li>
 </ul>
 
 </body>
