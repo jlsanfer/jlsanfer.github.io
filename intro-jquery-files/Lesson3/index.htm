@@ -54,16 +54,38 @@
 
     //Using JQuery to select and change attributes of elements
     $(function() {
-    $('#alcoveLogo').css('opacity', 0.4);
+    $('#alcoveLogo').css('opacity', 0.8);
     $('.servicesBtn').css('color', '#FFF');
     $('button').css('border', '1px solid red');
     $('h2').css('border', '1px solid red');
+    /*
     //Selects the input field named nameVal
-    //$('input[name="nameVal"]').css('border', '1px solid red');
+    $('input[name="nameVal"]').css('border', '1px solid red');
+    */
 
+    /*
     //Selects all fieds that are not phoneNum
     $('input[name!="phoneNum"]').css('border', '1px solid red');
+    */
 
+    //Selects all fieds that contain Val in their value
+    $('input[name$="Val"]').css('border', '1px solid red');
+
+    /*
+    //objects after logo will have a different background
+    $('#alcoveLogo').next().css('background-color', 'rgba(255, 0, 0, 0.2)');
+    */
+
+    /*
+    //All objects after .box1 object will have a different backgound
+    $('.box1').nextAll().css('background-color', 'rgba(255, 0, 0, 0.2)');
+    */
+
+    $('.header').children().css('background-color', 'rgba(255, 0, 0, 0.2)');
+
+    $('.navigation > li:eq(2)').parent().parent().parent().css('opacity', '0.3');
+
+    $('.servicesBtn').closest('div').css('background-color', 'rgba(255, 0, 0, 0.2)');
 
     })
 
