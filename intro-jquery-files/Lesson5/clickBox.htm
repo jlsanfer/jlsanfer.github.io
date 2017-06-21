@@ -1,25 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
-	<link rel="stylesheet" href="css/clickbox.css">
-	<script src="js/jquery-3.0.0.min.js"></script>
-	<script>
-	$(function(){
-		// jQuery Code goes here
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/clickbox.css">
+  <script src="js/jquery-3.0.0.min.js"></script>
+  <script>
+  $(function(){
+    /*
+    $('.boxHolder').on('click', 'li', function(){
+      $(this).addClass('greenBox');
+    })
 
-	})
-	</script>
+    $('.boxHolder').on('dblclick', 'li', function(){
+      $(this).addClass('orangeBox');
+    })
+    */
+
+    $('.boxHolder').on({
+      click: function(){
+      $(this).addClass('greenBox').html($(this).index());
+      },
+      dblclick: function()  {$(this).addClass('orangeBox').html($(this).index());
+      },
+      mouseenter: function(){
+        $(this).css('opacity', 0.3);
+      },
+      mouseleave: function(){
+        $(this).css('opacity', 1.0);
+      }
+    }, "li")
+  })
+  </script>
 </head>
 <body>
-	<ul class="boxHolder">
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-		<li></li>
-	</ul>
+  <ul class="boxHolder">
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+  </ul>
 </body>
 </html>
