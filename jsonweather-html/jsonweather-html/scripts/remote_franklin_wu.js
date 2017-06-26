@@ -4,7 +4,7 @@ $(function () {
   var status = $('#status');
 
   (function getGeoLocation() {
-    status.text('Getting Location...');
+    status.text('');
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition(function (position) {
         var lat = 42.011902;
@@ -24,7 +24,7 @@ $(function () {
   function getData(lat, long){
     $.ajax({
       //zmw:83237.1.99999
-      url : 'http://api.wunderground.com/api/257fcd7045f9ce1c/geolookup/conditions/q/zmw:83237.1.99999.json',
+      url : "http://api.wunderground.com/api/257fcd7045f9ce1c/geolookup/conditions/q/zmw:83237.1.99999.json",
       dataType : "jsonp",
       success : function(parsed_json) {
         //var location = parsed_json['location']['city'];
@@ -40,12 +40,15 @@ $(function () {
         var speed = parsed_json['current_observation']['wind_mph'];
         $('#add1').html("Wind: " + speed + " MPH");
 
-        var currentImage = parsed_json['current_observation']['icon_url'];
-        /*$('#add2').load('currentImage');*/
+        var humidity = parsed_json['current_observation']['relative_humidity'];
+        $('#add2').html("Humidity: " + humidity);
 
-        $('#image').attr( "src", function(currentImage) {
+        /*$('#current-image').html('<img src="'+data.current_observation.icon_url+'" alt="Current Condition Image">');*/
+
+        /*$('#image').attr( "src", function(currentImage) {
           return this.currentImmage;
-        });
+
+        });*/
 
         $("#cover").fadeOut(250);
         console.log(parsed_json);
