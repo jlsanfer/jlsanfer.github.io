@@ -24,7 +24,7 @@ $(function () {
   function getData(lat, long){
     $.ajax({
       //zmw:83237.1.99999
-      url : "http://api.wunderground.com/api/257fcd7045f9ce1c/geolookup/conditions/q/zmw:83237.1.99999.json",
+      url : "https://api.wunderground.com/api/257fcd7045f9ce1c/geolookup/conditions/q/zmw:83237.1.99999.json",
       dataType : "jsonp",
       success : function(parsed_json) {
         //var location = parsed_json['location']['city'];
