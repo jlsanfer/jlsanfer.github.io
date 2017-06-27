@@ -23,16 +23,16 @@ $(function () {
     $.ajax({
       url: "https://api.wunderground.com/api/257fcd7045f9ce1c/geolookup/conditions/q/" + lat + "," + long + ".json",
       dataType: "jsonp",
-      success: function (parsed_json) {
+      success : function(parsed_json) {
         //var location = parsed_json['location']['city'];
         var location = parsed_json['current_observation']['display_location']['full'];
-        $('#cityDisplay').html(location);
+        $('#cityDisplay').html( location );
 
         var temp_f = parsed_json['current_observation']['temp_f'];
-        $('#currentTemp').html(Math.round(temp_f) + " &#8457");
+        $('#currentTemp').html( Math.round(temp_f) + " &#8457" );
 
         var summaryText = parsed_json['current_observation']['weather'];
-        $('#summary').html(summaryText);
+        $('#summary').html( summaryText );
 
         var speed = parsed_json['current_observation']['wind_mph'];
         $('#add1').html("Wind: " + speed + " MPH");
@@ -46,16 +46,14 @@ $(function () {
         /*$("#current-image").html('<img src="'+parsed_json.current_observation.icon_url+'" alt="Current Condition Image">');*/
 
         $("#cover").fadeOut(250);
-
         console.log(parsed_json);
       }
     });
+
   }
 
   // A function for changing a string to TitleCase
-  function toTitleCase(str) {
-    return str.replace(/\w+/g, function (txt) {
-      return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
-    });
+  function toTitleCase(str){
+    return str.replace(/\w+/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
   }
 });
