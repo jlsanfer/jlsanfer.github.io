@@ -40,7 +40,7 @@ $(function () {
         var humidity = parsed_json['current_observation']['relative_humidity'];
         $('#add2').html("Humidity: " + humidity);
 
-        /*$('#current-image').html('<img src="' + data.current_observation.icon_url + '" alt="Current Condition Image">');*/
+        $('#current-image').html('<img src="'+data.current_observation.icon_url+'" alt="Current Condition Image">');
 
 
         $("#cover").fadeOut(250);
