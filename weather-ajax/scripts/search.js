@@ -37,8 +37,10 @@ function getData(input) {
       console.log(data);
       var location = data.current_observation.display_location.full;
       var temp_f = data.current_observation.temp_f;
+      var today = data.forecast.simpleforecast.forecastday[0];
       console.log('Location ' + location);
       console.log('Current Temp ' + temp_f);
+      console.log('High Today ' + today.high.farenheit);
       $("title").html(location + " | Weather Center");
       $("#cityDisplay").text(location);
       $("#currentTemp").html(Math.round(temp_f) + ' °F');
