@@ -41,7 +41,7 @@ $(function () {
         $('#add2').html("Humidity: " + humidity);
 
         var image = parsed_json['current_observation']['icon_url'];
-        $('#current-image').html('<img src="'+image+'"" alt="Current Condition Image">');
+        $('#current-image').html('<img src="'+ image +'"" alt="Current Condition Image">');
 
         /*$("#current-image").html('<img src="'+parsed_json.current_observation.icon_url+'" alt="Current Condition Image">');*/
 
