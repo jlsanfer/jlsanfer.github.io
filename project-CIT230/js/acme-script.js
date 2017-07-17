@@ -1,27 +1,32 @@
 $(function() {
-  $("#nav-items").append('<li id="home"><a href="link" title="Go to home page.">Home</a></li>');
-
+  $("#navList").append('<li id="home"><a href="link" title="Home page.">Home</a></li>');
 
   $.getJSON('js/acme.json',function(result) {
+    console.log(result);
     $.each(result.navigation, function(i, nav){
-      console.log(result);
-      var name = result.navigation[i].name;
-      console.log(name);
-
-      $("#nav-items").append('<li id="' + name.toLowerCase() + '"><a href="link" title="Go to ' + name + '.">' + name + '</a></li>');
-
+      var nameItem = result.navigation[i].name;
+      /*console.log(name);*/
+      //converts listed items on lowercase, and creates the hyperlink
+      $("#navList").append('<li id="' + nameItem.toLowerCase() + '"><a href="link" title="Go to ' + nameItem + '.">' + nameItem + '</a></li>');
     })
+
+    //Event to clear content of products and displays the Home content
     $('#home').on("click", function( event ){
       event.preventDefault();
-      $(document).attr("title", "ACME Home Page");
+      $(document).attr("title", "Home | ACME");
       $('#homecontent').show();
       $('#product').css('visibility','hidden');
     })
-    $('#page-nav').on("click", ":not(:first-child) a", function( event ){
+
+    //Event to hide Home page and display products
+    $('#navBar').on("click", ":not(:first-child) a", function( event ){
       event.preventDefault();
       var itemname = this.text;
+      //All homecontend id is cleared
       $("#homecontent").hide();
+      //loads content and makes it visible
       $("#product").css('visibility', 'visible');
+      //Decider is the variable that stores the item number related to the on clic event
       var decider;
       if (itemname == result.navigation[0].name){
         decider = 0;
@@ -35,86 +40,31 @@ $(function() {
       if (itemname == result.navigation[3].name){
         decider = 3;
       }
-      var tion = result.navigation[decider].description;
+      var descript = result.navigation[decider].description;
       $('#deets').remove();
       $('#details').remove();
       $('#showcase > h1').remove();
-      var wholename = result.navigation[decider].name;
-      $(document).attr("title", wholename + " | ACME");
-      $('#showcase').append('<h1>' + wholename + '</h1>');
+      var nameItem = result.navigation[decider].name;
+      $(document).attr("title", nameItem + " | ACME");
+      // The append() method inserts specified content at the endo of a selected element
+      $('#showcase').append('<h1>' + nameItem + '</h1>');
       $('#showcase').append('<div id="details">');
-      var imgpath = result.navigation[decider].path;
-      $('#details').append('<img src="' + imgpath + '" alt="' + itemname + '">');
+      var imagePath = result.navigation[decider].path;
+      $('#details').append('<img src="' + imagePath + '" alt="' + itemname + '">');
       $('#details').append('<ul id="deets">');
-      $('#deets').append('<li class="description"><strong>Description:</strong><br> ' + tion + '</li>');
-      var man = result.navigation[decider].manufacturer;
-      $('#deets').append('<li class="manufacturer"><strong>Manufacturer:</strong><br> ' + man + '</li>');
-      var score = result.navigation[decider].reviews;
-      $('#deets').append('<li class="reviewscore"><strong>Reviews:</strong><br> ' + score + '/5 Stars</li>');
+      $('#deets').append('<li class="description"><strong>Description:</strong><br> ' + descript + '</li>');
+      var manufact = result.navigation[decider].manufacturer;
+      $('#deets').append('<li class="manufacturer"><strong>Manufacturer:</strong><br> ' + manufact + '</li>');
+      var revItem = result.navigation[decider].reviews;
+      $('#deets').append('<li class="reviewscore"><strong>Reviews:</strong><br> ' + revItem + '/5 Stars</li>');
       var price = result.navigation[decider].price;
-      $('#deets').append('<li class="price"><strong>Price:</strong> $' + price + '</li>');
+      $('#deets').append('<li class="price"><strong>Price:</strong> $' + price + '</li><br>');
       $('#deets').append('</ul>');
       $('#deets').append('</div');
+      //Shows the times that the code has been executed succesfully
       console.log("Success");
     })
-
   })
-  //START EXPERIMENTAL AJAX BLOCK
-  //    $.ajax({
-  //    url : "js/acme.json",
-  //    dataType : "json",
-  //    success : function(data){
-  //      console.log(data);
-  //          var datadata = data;
-  //        var temp;
-  //        for (i = 0; i < 4; i++) {
-  //            temp = data.navigation[i].nameshort;
-  //
-  //            console.log(temp);
-  //        }
-  //          var name = data.navigation[i].nameshort;
-  //          var path = data.navigation[i].path;
-  //          console.log(name);
-  //          console.log(path);
-  //END EXPERIMENTAL AJAX BLOCK
-
-
-
-  //needs to be worked in - experimental
-  //          $("#nav-items").append('<li id="' + name.toLowerCase() + '"><a href="' + path + '">' + name + '</a></li>');
-  //          console.log(name.toLowerCase());
-  //          console.log("<li id=\"" + name.toLowerCase() + "\"><a href=\"#\">" + name + "</a></li>")
-  //
-  //          $('#home').on("click", function( event ){
-  //        event.preventDefault();
-  //        $('#homecontent').show();
-  //        $('#product').css('visibility','hidden');
-  //      })
-  //    $('#page-nav').on("click", ":not(:first-child) a", function( event ){
-  //          event.preventDefault();
-  //        var itemname = this.text;
-  //        console.log(itemname);
-  //        var decider;
-  //        if (itemname == datadata.navigation[0].nameshort){
-  //            decider = 0;
-  //        }
-  //        if (itemname == datadata.navigation[1].nameshort){
-  //            decider = 1;
-  //        }
-  //        if (itemname == datadata.navigation[2].nameshort){
-  //            decider = 2;
-  //        }
-  //        if (itemname == datadata.navigation[3].nameshort){
-  //            decider = 3;
-  //        }
-  //
-  //        $('#homecontent').hide();
-  //        $('#product').css('visibility','visible');
-  //
-  //        //make the "page"
-  //        $('#details > ul').append('lalalalalalalala' + itemname);
-  //      })
-
 });
 
 
