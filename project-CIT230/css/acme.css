@@ -121,6 +121,7 @@ header > img.wide {
 }
 .genius{
   width: 100%;
+
   /*    height: 25em;*/
 }
 @media screen and (min-width: 500px) and (max-width: 767px){
@@ -134,8 +135,8 @@ header > img.wide {
   text-align: center;
   font-size: 80%;
   position: absolute;
-  left: 45%;
-  bottom: 10em;
+  left: 60%;
+  bottom: 10%;
   padding: 0;
   margin: 0;
 
@@ -175,7 +176,7 @@ header > img.wide {
 
 }
 #product{
-  width: 40%;
+  width: 100%;
   flex-flow: row wrap;
   flex: auto;
   align-items: flex-end;
@@ -183,6 +184,7 @@ header > img.wide {
   background-color: #ffffff;
   border: 1px solid black;
   border-radius: 5px;
+  padding-left: 2em;
   padding-bottom: 1em;
   margin-bottom: 1em;
 
