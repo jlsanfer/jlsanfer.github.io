@@ -146,7 +146,8 @@ header > img.wide {
     max-height: 15em;
   }
   .imageText{
-    bottom: 13em !important;
+    bottom: 22em !important;
+    left: 45%;
   }
 }
 #fondo{
