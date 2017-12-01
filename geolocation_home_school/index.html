@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+      * element that contains the map. */
+      #map {
+        width: 107%;
+        height: 70%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      #icons {
+        width: 110%;
+        height: auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+
+      }
+
+      #menu_list ul li {
+        display: inline;
+
+      }
+
+      #menu_list ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+      }
+
+      #menu_list li {
+        font-size: 1px;
+        width: 1px;
+        padding: 0;
+      }
+
+      #menu_list span {
+       /* height: 31px;*/
+        padding: 0px;
+        margin: 0px
+          font-size: 1px;
+      }
+
+      /*
+      Individual menu items
+      */
+
+      #math_icon {
+        width: 100%;
+        background-image: url("imgs/math.jpg");
+      }
+
+      #sports_icon {
+        width: 24%;
+        background-image: url("imgs/sports.jpg");
+      }
+
+      #music_icon {
+        width: 24%;
+        background-image: url("imgs/music.jpg");
+      }
+
+      #arts_icon {
+        width: 24%;
+        background-image: url("imgs/arts.jpg");
+      }
+
+      #languages_icon {
+        width: 24%;
+        background-image: url("imgs/languages.jpg");
+      }
+
+      #blank_icon {
+        width: 24%;
+        background-image: url("imgs/blank.jpg");
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div id="map">
+    <script>
+      var map;
+      function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 8,
+          center: new google.maps.LatLng(43.8231, -111.7924),
+          mapTypeId: 'roadmap'
+        });
+
+        // Create a <script> tag and set the USGS URL as the source.
+        var script = document.createElement('script');
+        // This example uses a local copy of the GeoJSON stored at
+        script.src = "../geolocation_home_school/usersMath.json";
+          //'https://developers.google.com/maps/documentation/javascript/examples/json/earthquake_GeoJSONP.js';
+        document.getElementsByTagName('head')[0].appendChild(script);
+      }
+
+      // Loop through the results array and place a marker for each
+      // set of coordinates.
+      window.eqfeed_callback = function(results) {
+        for (var i = 0; i < results.features.length; i++) {
+          var coords = results.features[i].geometry.coordinates;
+          var latLng = new google.maps.LatLng(coords[1],coords[0]);
+          var marker = new google.maps.Marker({
+            position: latLng,
+            map: map
+          });
+        }
+      }
+    </script>
+
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB7pHo-owO355F_Qdeh7PKXKmf0oPP9-Eg&callback=initMap">
+    </script>
+    </div>
+
+    <div id="icons">
+      <div id="mathIcon"> <img src="/geolocation_home_school/imgs/math.jpg" alt="Math Icon" onclick="location.href = '/math.html'"></div>
+      <div id="sportsIcon"> <img src="/geolocation_home_school/imgs/sports.jpg" alt="Sports Icon" onclick="location.href = '/sports.html'"></div>
+      <div id="musicIcon"> <img src="/geolocation_home_school/imgs/music.jpg" alt="Music Icon"></div>
+      <div id="artsIcon"><img src="/geolocation_home_school/imgs/arts.jpg" alt="Arts Icon"></div>
+      <div id="languagesIcon"><img src="/geolocation_home_school/imgs/languages.jpg" alt="Languages Icon"></div>
+      <div id="blank"><img src="/geolocation_home_school/imgs/blank.jpg" alt="Blank Icon"></div>
+
+    </div>
+
+    <!--xmlhttp request-->
+
+ <!--   <div id="menu_icons"> xmlhttp request
+      <ul id="menu_list">
+      <li><a href="#" title="Math"><span id="math_icon"></span></a></li>
+      <li><a href="#" title="Sports"><span id="sports_icon"></span></a></li>
+      <li><a href="#" title="Music"><span id="music_icon"></span></a></li>
+      <li><a href="#" title="Arts"><span id="arts_icon"></span></a></li>
+      <li><a href="#" title="Languages"><span id="languages_icon"></span></a></li>
+      <li><a href="#" title="Blank"><span id="blank_icon"></span></a></li>
+      </ul>
+    </div>-->
+  </body>
+</html>

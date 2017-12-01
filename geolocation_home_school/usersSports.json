@@ -1,0 +1,93 @@
+eqfeed_callback({
+  "type": "FeatureCollection",
+  "features": [{
+      "name": "Arthur Cortis",
+      "type": "Math",
+      "properties": {
+        "address": "870 N Taylor RD, Rexburg, ID",
+        "language": "eng",
+        "gender": "male",
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-112, 44, -500],
+        "title": "Arthur Cortis, Math"
+      },
+      "id": "usc000csx3"
+  },
+    {
+      "name": "Mark Stevens",
+      "type": "Math",
+      "properties": {
+        "address": ", Rexburg, ID",
+        "language": "eng",
+        "gender": "male",
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.9, 43.65, -500],
+        "title": "Mark Steven, Math"
+      },
+      "id": "usc000csx3"
+               },
+    {
+      "name": "Laura Adams",
+      "type": "Math",
+      "properties": {
+        "address": "Rexburg, ID",
+        "language": "eng",
+        "gender": "female",
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.94, 43.67, -500],
+        "title": "Laura Adams, Math"
+      },
+      "id": "usc000csx3"
+               },
+    {
+      "name": "Luis Armstrong",
+      "type": "Math",
+      "properties": {
+        "address": "870 N Taylor RD, Rexburg, ID",
+        "language": "eng",
+        "gender": "male",
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-111.96, 43.665, -500],
+        "title": "Luis Armstrong, Math"
+      },
+      "id": "usc000csx3"
+               },
+    {
+      "name": "Lee Barney",
+      "type": "Math",
+      "properties": {
+        "address": "870 N Taylor RD, Rexburg, ID",
+        "language": "eng",
+        "gender": "male",
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-112.922, 43.656, -500],
+        "title": "Lee Barney, Math"
+      },
+      "id": "usc000csx3"
+               },
+    {
+      "name": "Michael Jordan",
+      "type": "Math",
+      "properties": {
+        "address": "870 N Taylor RD, Rexburg, ID",
+        "language": "eng",
+        "gender": "male",
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [-110.96, 43.95, -500],
+        "title": "Michael Jordan, Math"
+      },
+      "id": "usc000csx3"
+               }]
+});
